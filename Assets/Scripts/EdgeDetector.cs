@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class EdgeDetector : MonoBehaviour
 {
-	public bool isColliding = true;
+    public bool isColliding { get; private set; } = true;
 
-    [SerializeField, AutoHook]
+    [SerializeField, AutoHook(ReadOnlyWhenFound = true)]
     private CircleCollider2D circleCollider;
 
     //private void Update()
