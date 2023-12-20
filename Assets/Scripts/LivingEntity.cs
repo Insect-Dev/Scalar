@@ -38,6 +38,9 @@ public class LivingEntity : MonoBehaviour
     [SerializeField]
     private float groundedRayLength;
 
+    [SerializeField]
+    private Vector2 spawnPosition;
+
     [Header("Jump Timer")]
 
     [SerializeField]
@@ -45,6 +48,11 @@ public class LivingEntity : MonoBehaviour
 
     [SerializeField]
     private float jumpTimer;
+
+    private void Start()
+    {
+        spawnPosition = transform.position;
+    }
 
     private void FixedUpdate()
     {
@@ -68,9 +76,7 @@ public class LivingEntity : MonoBehaviour
     {
         if (transform.position.y < GameManager.instance.worldBarrier)
         {
-            transform.position = Vector2.up;
-            rb.velocity = Vector2.zero;
-            soundPlayer.PlaySound("death");
+            Die();
         }
 
         if (jumpTimer > 0)
@@ -97,6 +103,8 @@ public class LivingEntity : MonoBehaviour
 
     public void Die()
     {
+        transform.position = spawnPosition;
+        rb.velocity = Vector2.zero;
         soundPlayer.PlaySound("death");
     }
 
