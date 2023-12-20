@@ -31,7 +31,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player
+  m_Name: NPC
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Absolute Speed
@@ -117,7 +117,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9816eab43c99143b6858e645ff53d519, type: 2}
+  m_Motion: {fileID: 7400000, guid: f03ebabd63704424aacb7fbb59155b07, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -144,7 +144,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5a182d43eb55f458bbce4eeafd118def, type: 2}
+  m_Motion: {fileID: 7400000, guid: 890aa08b3131b44c1841984ea5d565a8, type: 2}
   m_Tag: 
   m_SpeedParameter: Absolute Speed
   m_MirrorParameter: 
@@ -171,7 +171,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 31979cf3a90d346109e7f30d1064618e, type: 2}
+  m_Motion: {fileID: 7400000, guid: b59d66c69ba354e9bbcfd4d63bc14e5c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
