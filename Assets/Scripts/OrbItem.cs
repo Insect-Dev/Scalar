@@ -17,6 +17,8 @@ public class OrbItem : MonoBehaviour
 
     [SerializeField] private bool active = true;
 
+    [SerializeField] private bool animatingOut = false;
+
     [SerializeField] private OrbType type;
 
     [Header("Sprites")]
@@ -33,7 +35,7 @@ public class OrbItem : MonoBehaviour
 
     public bool PickUp()
     {
-        if (!active) return false;
+        if (!active || animatingOut) return false;
 
         animator.SetTrigger("Pick Up");
 
@@ -44,9 +46,13 @@ public class OrbItem : MonoBehaviour
 
     public IEnumerator WaitToDelete()
     {
+        animatingOut = true;
+
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
         active = false;
+
+        animatingOut = false;
     }
 
 

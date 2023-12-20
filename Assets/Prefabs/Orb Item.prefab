@@ -99,7 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfbbbc174bbc345069bd672b4240a328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  spriteRenderer: {fileID: 0}
+  animator: {fileID: 0}
+  active: 1
+  animatingOut: 0
+  type: 1
   minusOrb: {fileID: 8607719570819031095, guid: 41e7d47f8fc7543c6a6600bb48a780f6, type: 3}
   plusOrb: {fileID: -7587175067781376136, guid: 9980f2742c0954058aa5f8d0a9e38106, type: 3}
 --- !u!58 &1907301359902374324
